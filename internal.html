@@ -1,26 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=0, initial-scale=1.0">
-    <title>Document</title>
-
-    <style>
-        p{
-            background-color:darkmagenta;
-            color:beige;
-            font-size:20px;
-            text-align:center;
-        }
-    </style>
-
-</head>
-<body>
-    <p> Hello How Are You</p>
-    <p> Hello How Are You</p>
-    <p> Hello How Are You</p>
-    <p> Hello How Are You</p>
-    <p> Hello How Are You</p>
-    
-</body>
+<html>
+    <head>
+        <title>Internal Javascript in HTML</title>
+    </head>
+    <body>
+        <h2>Internaljavascript example</h2>
+        <p id ="demo">Click The button to see a message.</p>
+        <button onclick="displayMessage()">Click me</button>
+        <script>
+            function displayMessage(){
+                document.getElementById("demo").innerHTML="Hello! YOu clicked on button.";
+            }
+        </script>
+    </body>
 </html>
