@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    
+    <style>
+        input:focus
+        {
+            background-color: crimson;
+        }
+
+        input:checked
+        {
+            height:20px;
+            width: 20px;
+        }
+    </style>
+
+<body>
+
+    <center>
+        <h1>Demo of the:focus selector</h1>
+        <p>Click inside the text fields to see a yellow background:</p>
+
+        <form>
+            Enter first name<br><br>
+            <input type="text" name="firstname"><br><br>
+
+            Enter Last name<br><br>
+            <input type="text" name="lastname"><br><br>
+
+            <input type="radio" value="male" name="gender">male
+            <input type="radio" value="female" name="gender">female<br><br>
+
+            <label><b> Choose Language</b></label><br><br>
+            <input type="checkbox" id="lang">HTML
+            <input type="checkbox" id="lang">CSS <br><br>
+
+            <input type="submit" name="sub"/><br><br>
+        </form>
+    </center>
+   
+</body>
+</html>

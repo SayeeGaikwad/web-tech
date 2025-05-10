@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+       a:visited {
+        color:lime;
+       }
+
+       a:hover {
+        color:darksalmon;
+       }
+
+       a:active {
+        color:chartreuse;
+       }
+
+       .center
+       {
+          background-color: darkgreen;
+          color:azure;
+          padding:25px;
+          text-align:center;
+          height:60px;
+          width: 50px;
+       }
+
+       .center:hover
+       {
+        background-color: cornflowerblue;
+       }
+
+       h3{
+
+        display:none;
+        background-color: gold;
+        padding:20px;
+        height:60px;
+        width: 70px;
+       }
+
+       div:hover h3
+       {
+        display:block;
+       }
+
+</style>
+<body>
+
+    <h2>Styling a link depending on state</h2>
+
+    <p><b><a href="manali.png" target="_blank">This is a link</a></b></p>
+
+        <h4>Mouse over the div element below to change its background color:</h4>
+        <div class="center">
+            Mouse Over here!!!
+        </div>
+
+        <br><br>
+
+        <div>Click here!!!
+            <h3>MOUSE OVER MEEE!!!</h3>
+        </div>
+    
+</body>
+</html>

@@ -1,0 +1,10 @@
+body{
+    background-color: aqua;
+}
+h1{
+    text-align: center;
+}
+p{
+    font-size: 20px;
+    font-weight: bolder;
+}

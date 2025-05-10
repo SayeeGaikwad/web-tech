@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* selects the second element of div */
+        div:nth-child(2)
+        {
+            background-color: red;
+        }
+         
+       /* selects second li element */
+        li:nth-child(2)
+        {
+            background-color: lightgreen;
+        }
+          
+
+        li:nth-last-child(2)
+        {
+            font-size: 25px;
+        }
+
+        .center p:nth-last-of-type(3)
+        {
+            color: blueviolet;
+            font-size: 25px;
+        }
+         
+        /*selects every third element among any group of element*/
+        :nth-child(3)
+        {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <p>This is first text</p>
+    </div>
+
+    <div>
+        <p>This is second text </p>
+    </div>
+
+    <div>
+        <p>This is third text</p>
+    </div>
+
+    <ul>
+        <li>First list item</li><br>
+        <li>Second list item</li><br>
+        <li>Third list item</li>
+    </ul>
+
+    <section class="center">
+        <p>Coffee</p>
+        <p>Tea</p>
+        <p>Milk</p>
+    </section>
+</body>
+</html>
