@@ -1,52 +1,27 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-function FileHandler() {
-  const [fileContent, setFileContent] = useState("");
-  const [fileName, setFileName] = useState("");
+function Child({ onButtonClick }) {
+  return (
+    <button onClick={() => onButtonClick('Hello from Child!')}>
+      Click me
+    </button>
+  );
+}
 
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
+function Parent() {
+  const [message, setMessage] = useState('');
 
-    setFileName(file.name);
-
-    const reader = new FileReader();
-
-    reader.onload = (event) => {
-      setFileContent(event.target.result);
-    };
-
-    reader.onerror = () => {
-      alert("Error reading file");
-    };
-
-    reader.readAsText(file); // Reads file as text
+  // This is the callback function that will be passed to the child
+  const handleCallback = (childData) => {
+    setMessage(childData);
   };
 
   return (
-    <div style={{ padding: "20px", fontFamily: "Arial" }}>
-      <h2>File Handling in React</h2>
-      <input type="file" onChange={handleFileChange} />
-      {fileName && <h3>File Name: {fileName}</h3>}
-      {fileContent && (
-        <div>
-          <h4>File Content:</h4>
-          <pre
-            style={{
-              backgroundColor: "#f4f4f4",
-              padding: "10px",
-              borderRadius: "5px",
-              maxHeight: "300px",
-              overflowY: "auto",
-              whiteSpace: "pre-wrap",
-            }}
-          >
-            {fileContent}
-          </pre>
-        </div>
-      )}
+    <div>
+      <h1>Message from child: {message}</h1>
+      <Child onButtonClick={handleCallback} />
     </div>
   );
 }
 
-export default FileHandler;
+export default Parent;
